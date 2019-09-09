@@ -1,0 +1,45 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.dev.js"></script>
+    <title>Survey Form</title>
+</head>
+<body>
+    <div id="resultHo" class="p-3 text-center" style="display: none; background-color: green; height: 150px; color: white;"></div>
+    <div class="order-md-1 mx-auto" style="width: 50%; padding-top: 50px;">
+        <h4 class="mb-3">Survey Form</h4>
+            <div class="mb-3">
+                <label for="username">Your Name:</label>
+                <div class="input-group">
+                    <input type="text" class="form-control" id="name" placeholder="Name" required>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="country">Dojo Location:</label>
+                <select class="custom-select d-block w-100" id="location" required>
+                    <option value="" disabled selected>Choose...</option>
+                    <option value="Los Angeles">Los Angeles</option>
+                    <option value="Seattle">Seattle</option>
+                    <option value="San Jose">San Jose</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="country">Favorite Language: </label>
+                <select class="custom-select d-block w-100" id="language" required>
+                    <option value="" disabled selected>Choose...</option>
+                    <option value="Python">Python</option>
+                    <option value="Java">Java</option>
+                    <option value="JavaScript">JavaScript</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="email">Comment <span class="text-muted">(Optional)</span></label>
+                <textarea type="text" class="form-control" id="comment" placeholder="The course was fun because..." style="height: 150px; resize: none;"></textarea>
+            </div>
+            <hr class="mb-4">
+            <button id="localHo" class="btn btn-outline-primary btn-lg">Submit</button>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
